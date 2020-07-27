@@ -1,0 +1,23 @@
+$primary-color: #ffdf00;
+
+.prefix {
+  font-size: 8vw;
+  text-align: center !important;
+  color: $primary-color;
+}
+
+.error-large-text {
+  font-size: 20vw;
+  text-align: center !important;
+  text-shadow: -4px -4px 0 #ffdf00,
+      4px -4px 0 #ffdf00,
+      -4px 4px 0 #ffdf00,
+      4px 4px 0 #ffdf00;
+  font-weight: 800;
+  line-height: 15vw;
+  color: black !important;
+}
+
+.error-wrapper {
+  min-height: calc(100vh - 120px - 100px)
+}

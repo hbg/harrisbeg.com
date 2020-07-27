@@ -1,0 +1,329 @@
+$primary-color: #ffdf00;
+@import url('https://rsms.me/inter/inter.css');
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter var', sans-serif !important;
+  }
+}
+
+@mixin animation {
+  transition: 200ms ease-in-out all;
+}
+
+@mixin wavy-underline($color: mix($primary-color, #000, 60)) {
+  text-decoration: underline wavy $color;
+}
+
+* {
+  transition: 250ms ease-in-out all;
+}
+
+.email {
+  font-weight: 800;
+  font-size: 48pt;
+  color: $primary-color;
+}
+
+.nbar {
+  .nm {
+    text-shadow: -1px -1px 0 #ffdf00,
+    1px -1px 0 #ffdf00,
+    -1px 1px 0 #ffdf00,
+    1px 1px 0 #ffdf00;
+    font-weight: 800;
+    color: black !important;
+
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.hover-icon {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+body {
+  transition: 200ms ease-in-out all;
+  color: black;
+}
+
+html, .nbar {
+  background-color: black !important;
+  scroll-behavior: smooth;
+  width: 100vw !important;
+  overflow-x: hidden;
+
+}
+
+span.mobile-text {
+  font-weight: 600;
+}
+
+body {
+  background: /*repeating-linear-gradient(
+                  45deg,
+                  mix($primary-color, #ffff, 30),
+                  mix($primary-color, #ffff, 30) 20px,
+                  mix($primary-color, #ffff, 10) 20px,
+                  mix($primary-color, #ffff, 10) 40px
+  )*/
+          black;
+  min-height: 100vh;
+}
+
+.nbar {
+  min-height: 120px;
+  height: auto;
+  border-bottom: 8px solid black;
+
+
+  .collapse.show {
+
+  }
+
+  .nm {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 64px;
+
+  }
+
+  .navbar-links {
+    font-size: 20pt;
+
+    svg {
+      height: 18pt;
+    }
+  }
+
+  #profile-image-container {
+    height: 80px;
+    width: 80px;
+    background: #222222;
+    border: 6px solid $primary-color;
+    border-radius: 30px;
+    background-image: url(https://www.superhack.org/images/IMG_6074.jpg);
+    background-size: contain;
+  }
+}
+
+#rundown-wrapper {
+  background-image: url("/BifurcationColored.jpg");
+  background-size: cover;
+  background-position: top center;
+  padding: 10vh 0;
+
+  #rundown-jim {
+    min-height: calc(100vh - 120px - 100px);
+    color: white !important;
+
+    .nm {
+      font-weight: 800;
+      font-size: 72pt;
+      line-height: 72px;
+      color: $primary-color;
+      letter-spacing: -0.06em;
+    }
+
+    .ds {
+      transform: scale(1, 0.8);
+      -webkit-transform: scale(1, 0.8);
+      -webkit-transform: scale(1, 0.8);
+      -moz-transform: scale(1, 0.8);
+      -ms-transform: scale(1, 0.8);
+      -o-transform: scale(1, 0.8);
+      font-size: 24pt;
+      margin-bottom: 12pt;
+      text-transform: uppercase;
+      line-height: 1.1;
+      font-weight: 900 !important;
+      letter-spacing: -0.06em;
+    }
+
+    .btn {
+      background: black !important;
+      color: $primary-color;
+      border: 4px solid $primary-color !important;
+      box-shadow: 4px 4px 0px darken($primary-color, 10);
+      text-transform: uppercase;
+      font-weight: 900 !important;
+      letter-spacing: 4px;
+
+      &:hover {
+        background: $primary-color !important;
+        color: black;
+        box-shadow: 2px 2px 0px darken($primary-color, 10);
+      }
+    }
+  }
+}
+
+a {
+  color: black;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.main-content {
+  background-color: mix($primary-color, #fff, 40) !important;
+  padding-top: 20px !important;
+
+  .introducer {
+    font-weight: 600;
+    font-size: 32pt;
+    margin: 32px 0px;
+  }
+
+  .card {
+    border-radius: 16px !important;
+    border: 8px solid black !important;
+    box-shadow: 8px 8px 0px mix($primary-color, black, 90);
+
+    &:hover {
+      box-shadow: 4px 4px 0px mix($primary-color, black, 70);
+      cursor: pointer;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 18pt;
+      @include wavy-underline(black)
+    }
+
+    .btn::after {
+      content: ' →';
+    }
+
+    margin: 16px;
+    @include animation;
+  }
+}
+
+.btn {
+  border-radius: 8px !important;
+  border: 4px solid black !important;
+  box-shadow: 4px 4px 0px #3f3f3f;
+  margin: 4px;
+  font-weight: 600 !important;
+
+  &:hover {
+    box-shadow: 2px 2px 0px #3f3f3f;
+  }
+
+  @include animation;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.stub.card {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: black !important;
+  box-shadow: none !important;
+}
+
+a.no_underline {
+  text-decoration: none;
+}
+
+.stub.hide.card {
+  background: black;
+}
+
+.footer {
+  height: 164px !important;
+  background: darken($primary-color, 1);
+  border-top: 8px solid black;
+
+  .footer-content {
+    padding: 32px 16px;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+  }
+
+  .nm {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 24pt;
+    color: black;
+
+    span.hbg {
+      text-shadow: -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+      color: $primary-color;
+    }
+  }
+}
+
+.nav-link {
+  color: $primary-color !important;
+  border-bottom: 4px solid black;
+
+  &:hover {
+    border-bottom: 4px solid $primary-color;
+  }
+
+}
+
+.disabled {
+  opacity: 0.5 !important;
+}
+
+@media screen and (max-width: 31.9em) {
+  .nbar {
+    background: transparent !important;
+
+    #profile-image-container {
+      border-color: $primary-color;
+    }
+
+    .nav-link {
+      padding: 4px 8px;
+      margin-bottom: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+    }
+
+    svg {
+      color: $primary-color !important;
+    }
+  }
+}
+
+@media screen and (max-width: 321px) {
+  #rundown-wrapper {
+    padding-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 32em) {
+  #rundown-jim {
+    .nm {
+      font-size: 96px;
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #rundown-jim {
+    .nm {
+      font-size: 120px !important;
+      line-height: 120px !important;
+    }
+  }
+}

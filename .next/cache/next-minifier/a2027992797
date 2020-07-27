@@ -1,0 +1,1 @@
+{"code":"(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{gY5k:function(n,t,e){\"use strict\";e.r(t);var o=e(\"q1tI\"),i=e.n(o).a.createElement;t.default=function(){return i(\"div\",null)}},seZk:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push([\"/partials/footer\",function(){return e(\"gY5k\")}])}},[[\"seZk\",1,0]]]);"}
