@@ -23,7 +23,15 @@ const Header = (props) => (
             <meta name="msapplication-TileColor" content="#FCEE21" />
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
             <meta name="theme-color" content="#FCEE21" />
-            <meta property="og:image" content={"https://og-image.harrisbegca.now.sh/**harrisbeg**%2F"+props.page_name.toLowerCase()+".jpeg?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fhbgw.harrisbegca.now.sh%2Fhbg.svg"} />
+            {props.page_name.toLowerCase() === "home" ? (
+                <meta property="og:image" content={"https://harrisbeg.com/home.png"} />
+            ) : (
+                props.page_name.toLowerCase() === "blog" ? (
+                <meta property="og:image" content={"https://harrisbeg.com/blog.png"} />
+                ) : (
+                    <meta property="og:image" content={"https://harrisbeg.com/200.png"} />
+                )
+            )}
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:width" content="375" />
             <meta property="og:image:height" content="214" />
@@ -34,6 +42,20 @@ const Header = (props) => (
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossOrigin="anonymous"
             />
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177212321-1"></script>
+            <script type="text/jsx"
+              dangerouslySetInnerHTML={{
+                __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+                  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177212321-1"></script>
+                  <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());gtag('config', 'UA-177212321-1');
+                  </script>
+                  `,
+              }}
+            />
+
 
         </Head>
     </div>

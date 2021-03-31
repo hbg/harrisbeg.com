@@ -15,7 +15,7 @@ body {
 }
 
 @mixin wavy-underline($color: mix($primary-color, #000, 60)) {
-  text-decoration: underline wavy $color;
+  // text-decoration: underline wavy $color;
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 
 .email {
   font-weight: 800;
-  font-size: 48pt;
+  font-size: 10vw;
   color: $primary-color;
 }
 
@@ -111,7 +111,7 @@ body {
     background: #222222;
     border: 6px solid $primary-color;
     border-radius: 30px;
-    background-image: url(https://www.superhack.org/images/IMG_6074.jpg);
+    background-image: url(/pfp.jpg);
     background-size: contain;
   }
 }
@@ -180,9 +180,16 @@ a {
   padding-top: 20px !important;
 
   .introducer {
-    font-weight: 600;
     font-size: 32pt;
     margin: 32px 0px;
+    background: #e6c900;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .divider {
+    padding: 48px 0;
+    opacity: 0.2;
   }
 
   .card {
@@ -243,7 +250,6 @@ a.no_underline {
 }
 
 .footer {
-  height: 164px !important;
   background: darken($primary-color, 1);
   border-top: 8px solid black;
 

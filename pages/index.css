@@ -11,7 +11,7 @@ body {
 
 .email {
   font-weight: 800;
-  font-size: 48pt;
+  font-size: 10vw;
   color: #ffdf00; }
 
 .nbar .nm {
@@ -61,7 +61,7 @@ body {
     background: #222222;
     border: 6px solid #ffdf00;
     border-radius: 30px;
-    background-image: url(https://www.superhack.org/images/IMG_6074.jpg);
+    background-image: url(/pfp.jpg);
     background-size: contain; }
 
 #rundown-wrapper {
@@ -113,9 +113,14 @@ a {
   background-color: #fff299 !important;
   padding-top: 20px !important; }
   .main-content .introducer {
-    font-weight: 600;
     font-size: 32pt;
-    margin: 32px 0px; }
+    margin: 32px 0px;
+    background: #e6c900;
+    text-transform: uppercase;
+    font-weight: 900; }
+  .main-content .divider {
+    padding: 48px 0;
+    opacity: 0.2; }
   .main-content .card {
     border-radius: 16px !important;
     border: 8px solid black !important;
@@ -127,8 +132,7 @@ a {
       cursor: pointer; }
     .main-content .card .card-title {
       font-weight: 700;
-      font-size: 18pt;
-      text-decoration: underline wavy black; }
+      font-size: 18pt; }
     .main-content .card .btn::after {
       content: ' →'; }
 
@@ -157,7 +161,6 @@ a.no_underline {
   background: black; }
 
 .footer {
-  height: 164px !important;
   background: #fadb00;
   border-top: 8px solid black; }
   .footer .footer-content {

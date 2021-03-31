@@ -1,7 +1,7 @@
-import './index.scss'
-import './error.scss'
 import Header from "../partials/head";
 import {GlobalFooter, GlobalNavbar} from "../partials/components";
+import './index.scss'
+import './error.scss'
 import React from "react";
 
 

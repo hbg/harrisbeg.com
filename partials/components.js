@@ -28,7 +28,6 @@ const projects = [
             'inaccessible by many across the globe - that\'s where skinCAM comes in. With 95% accuracy and 5,000 trained images from DermNetNZ ' +
             'as well as 10 of the most common skin diseases - including melanoma and carcinoma - dermatology comes down to one small cost: $0.',
         image: '/sc_banner.png',
-        url: 'https://play.google.com/store/apps/details?id=com.ai.shadowcipher.skincam3&hl=en_US',
         src: 'https://github.com/skincam/skinCAM-Python',
         specs: '/pdf/skincam_spec.pdf'
     },
@@ -44,6 +43,13 @@ const projects = [
         src: 'https://repl.it/@ShadowCypher/Smartify'
     },
     {
+        title: 'Super Hack: San Diego\'s Premiere High-School Hackathon',
+        image: '/16x9.png',
+        url: 'http://super-hack.herokuapp.com/',
+        text: 'San Diego, America\'s finest city, is faced with an issue. Despite the plethora of educational opportunities and creative minds, students aren\'t actively encouraged to "make." While theory is in our future, practicality must not be overlooked, and the art of practicality is derived through events such as hackathons. In lieu of this demand, Super Hack was started with one goal and one goal only in mind: create an event revolving around making. Raised $5,500 and over $10,000 in prizes. 400+ registrants on devpost, cancelled due to COVID-19.'
+
+    },
+    {
         title: 'MySocialHub',
         text: 'Right around 16 when I was added to the developer team behind MySocialHub, I started contributing to a platform that supported over 100,000 users' +
             ' - users that regularly posted content and engaged with YouTube content creators (such as Salomondrin and Daily Driven Exotics). At MySocialHub, I started off ' +
@@ -54,9 +60,8 @@ const projects = [
     },
     {
         title: 'Grabify',
-        text: 'Grabify is an IP logging utility that garners ~700,000 users every month, and is used very often by the scambaiting community by creators including ' +
-            'Pleasant Green and Nullbyte. It has also been featured on MTV\'s Catfish shiw thrice. I help with frontend development at Grabify as our website moves towards ' +
-            'a more material redesign. As of the moment, Grabify has over 90,000,000 logs.',
+        text: 'Grabify is an IP logging utility that attracts ~700,000 users every month, and is used very often by the scambaiting community by creators including ' +
+            'Pleasant Green and Nullbyte. It has also been featured on MTV\'s Catfish show thrice. As of the moment, Grabify has over 140,000,000 logs.',
         specs: 'https://www.youtube.com/watch?v=nW9-BJsdSb4',
         url: 'https://grabify.link/',
         image: '/grabify.png'
@@ -141,6 +146,14 @@ export class GlobalFooter extends Component {
     }
 }
 
+export class Divider extends Component {
+    render() {
+        return <img src={"/divider.svg"} className={"divider"}>
+
+        </img>
+    }
+}
+
 export class GlobalNavbar extends Component {
     render() {
         return <Navbar className="nbar" collapseOnSelect expand="lg">
@@ -170,7 +183,7 @@ export class GlobalNavbar extends Component {
                     </Nav.Item>
                     <Nav.Item>
 
-                        <Nav.Link href="/pdf/CV_HB.pdf">
+                        <Nav.Link href="/pdf/resume.pdf">
                             <FontAwesomeIcon icon={faDownload}/> <span className='mobile-text'>Resume</span>
                         </Nav.Link>
                     </Nav.Item>
@@ -236,9 +249,15 @@ export class ProjectCard extends Component {
                     <Card.Text>
                         {this.props.text || 'A sample description.'}
                     </Card.Text>
-                    <a href={this.props.url}>
-                        <Button variant="primary">Web</Button>
-                    </a>
+                    {this.props.url ?
+                        (
+                        <a href={this.props.url}>
+                            <Button variant="primary">Web</Button>
+                        </a>
+                    ) : (
+                        ''
+                    )
+                    }
                     {this.props.specs ?
                         (
                             <a href={this.props.specs}>
@@ -267,7 +286,7 @@ export class ProjectList extends Component {
     render() {
         return (
             <Row>
-                {projects.map((value, index) => {
+                {projects.map((value, _) => {
                     return <ProjectCard title={value.title} text={value.text} image={value.image} src={value.src}
                                         specs={value.specs} url={value.url}/>;
                 })}
@@ -287,4 +306,4 @@ export class StubsList extends Component {
     }
 }
 
-export default {ProjectCard, ColoredButton, GlobalNavbar, ProjectList, StubsList, Stub, GlobalFooter};
+export default {ProjectCard, ColoredButton, GlobalNavbar, ProjectList, StubsList, Stub, GlobalFooter, Divider};

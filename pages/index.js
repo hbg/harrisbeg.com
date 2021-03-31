@@ -2,7 +2,7 @@ import Header from '../partials/head';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import './index.scss'
-import {ColoredButton, GlobalNavbar, ProjectList, StubsList, GlobalFooter} from '../partials/components';
+import {ColoredButton, GlobalNavbar, ProjectList, StubsList, GlobalFooter, Divider} from '../partials/components';
 import React from "react";
 
 class Index extends React.Component {
@@ -25,8 +25,8 @@ class Index extends React.Component {
                         <p className='nm'>Hello, I'm Harris Beg!</p>
                         <div className='ds'>Maker, software developer, undergrad @ Caltech.</div>
                         <ColoredButton color='#f44d00' text='GitHub' url="https://github.com/hbg"/>
-                        <ColoredButton color='#ff6c0c' text='LinkedIn' url="https://www.linkedin.com/in/harrisbegcca/"/>
-                        <ColoredButton color='#ffaa00' text='CV' url="/pdf/CV_HB.pdf"/>
+                    <ColoredButton color='#ff6c0c' text='LinkedIn' url="https://www.linkedin.com/in/~harris/"/>
+                        <ColoredButton color='#ffaa00' text='Resume' url="/pdf/resume.pdf"/>
                         <ColoredButton color='#ffce00' text='Email'
                                        url='/email'/>
                     </Container>
@@ -37,6 +37,7 @@ class Index extends React.Component {
                         <Row>
                             <ProjectList/>
                         </Row>
+                        <Divider/>
                         <span className='introducer'>Smaller Projects</span>
                         <Row>
                             <StubsList/>
